@@ -26,6 +26,17 @@ angular.module('starter.controllers', [])
     //$scope.data = AppService.getData();
 })
 
-.controller('AgendaCtrl', function($scope, $stateParams, AppService) {
+.controller('AgendaCtrl', function($scope, AppService, $http) {
+
     $scope.data = AppService.getData();
+
+    $http.get('https://barcampbangalore.org/bcb/schadmin/android.json')
+    .then(
+        function success(response) {
+            $scope.data = response.data.slots;
+        },
+        function failed(response) {
+            console.log(response.data.slots);
+        }
+    );
 });
