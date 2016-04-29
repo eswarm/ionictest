@@ -15,9 +15,23 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$stable:                          #009688 !default;
+$positive:                        #607d8b !default;
+
+$base-background-color:           #b0bec5 !default;
+$base-color:                      #FFFFFF !default;
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.bar.bar-stable .title {
+    color : #FFFFFF;
+}
+
+.about-text {
+    padding : 20px;
+    font-size : 16px; 
+}
