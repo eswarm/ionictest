@@ -22,6 +22,10 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('AboutCtrl', function($scope, $stateParams) {
+.controller('AboutCtrl', function($scope, $stateParams, AppService) {
+    //$scope.data = AppService.getData();
+})
 
+.controller('AgendaCtrl', function($scope, $stateParams, AppService) {
+    $scope.data = AppService.getData();
 });
